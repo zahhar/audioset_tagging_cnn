@@ -1,11 +1,17 @@
-# PANNs: Large-Scale Pretrained Audio Neural Networks for Audio Pattern Recognition
+# Sound similarity demo 
 
-This repo contains code for our paper: **PANNs: Large-Scale Pretrained Audio Neural Networks for Audio Pattern Recognition** [1]. A variety of CNNs are trained on the large-scale AudioSet dataset [2] containing 5000 hours audio with 527 sound classes. A mean average precision (mAP) of 0.439 is achieved using our proposed Wavegram-Logmel-CNN system, outperforming the Google baseline of 0.317 [3]. The PANNs have been used for audio tagging and sound event detection. The PANNs have been used to fine-tune several audio pattern recoginition tasks, and have outperformed several state-of-the-art systems. 
+This repo contains code based on: **PANNs: Large-Scale Pretrained Audio Neural Networks for Audio Pattern Recognition** [1]. A variety of CNNs are trained on the large-scale AudioSet dataset [2] containing 5000 hours audio with 527 sound classes. A mean average precision (mAP) of 0.439 is achieved using our proposed Wavegram-Logmel-CNN system, outperforming the Google baseline of 0.317 [3]. The PANNs have been used for audio tagging and sound event detection. The PANNs have been used to fine-tune several audio pattern recoginition tasks, and have outperformed several state-of-the-art systems. 
 
 ## Environments
-The codebase is developed with Python 3.7. Install requirements as follows:
+The codebase is developed with Python 3. 
+Install as follows:
 ```
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
+
+chmod +x ./scripts/*.sh
+./scripts/0_download_model.sh
 ```
 
 ## Audio tagging using pretrained models
